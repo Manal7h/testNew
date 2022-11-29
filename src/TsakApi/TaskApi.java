@@ -10,19 +10,19 @@ import java.util.Scanner;
 
 public class TaskApi {
 	
-
-	  public static void main(String[] args) throws IOException {
 	
-		
+	  static void MenueTask(){
 		System.out.println("Please Choice one Option:");
 		System.out.println("1- Consume API and Write File:");
 		System.out.println("3- Search word from File:");
 		System.out.println("4- Exite:");
+		  }
 		
-		
-	
+	  public static void main(String[] args) throws IOException {
+
 		boolean isExit = true;
 		while (isExit) {
+			MenueTask();
 			Scanner sc = new Scanner(System.in);
 			
 			int select = sc.nextInt();

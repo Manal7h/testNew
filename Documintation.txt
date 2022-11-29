@@ -1,0 +1,36 @@
+-My URI in this task is :https://catfact.ninja/fact
+-Json convert is
+
+{
+  "fact": "Blue-eyed, pure white cats are frequently deaf.",
+  "length": 47
+}
+
+-First, Create new project in eclipse , the name is TsakApi.
+-IN this project create one main Class "JsonTask".
+-InSide this class , create two private Properties.
+	private String fact;
+	private int length;
+-For this two properties , create Getters and Setters.
+-Create other Class "TaskApi".
+-In this Class I used SOLID Principle to reduce code and make it more clear,  in Function "MenueTask()" :
+"Please Choice one Option:"
+"1- Consume API and Write File:"
+"3- Search word from File:"
+"4- Exite:"
+-Create Case For This question .
+-In first Case, Create Consume API and Write response in File. Read in "TaskAPI.txt".
+-In other Class Create code for Search 
+
+
+
+
+
+
+-Last Class Create Exit for meun.
+
+
+
+
+
+
