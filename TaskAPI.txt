@@ -1,1 +1,1 @@
-{"fact":"After humans, mountain lions have the largest range of any mammal in the Western Hemisphere.","length":92}
+{"fact":"The name \"jaguar\" comes from a Native American word meaning \"he who kills with one leap\".","length":89}
