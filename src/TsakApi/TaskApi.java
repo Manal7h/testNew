@@ -44,7 +44,8 @@ public class TaskApi {
 				}
 
 				System.out.println("JSON file created !!");
-
+				System.out.println("                    ");
+				System.out.println("                    ");
 				break;
 				
 			case 2:
@@ -52,18 +53,32 @@ public class TaskApi {
 
 
 			    System.out.println(" enter the content you looking for");
-			    String name = sc.next();
-			   
-			    	
-			        while (sc.hasNext()) {
-			            final String lineFromFile = sc.nextLine();
-			            if (lineFromFile.contains(name))
-			            		{
-			                // a match!
-			                System.out.println("I found " + name);
-			                break;
-			            }
-			        }
+//			    String name = sc.next();
+		    	
+//			        while (sc.hasNext()) {
+//			            final String lineFromFile = sc.nextLine();
+//			            if (lineFromFile.contains(name))
+//			            		{
+//			                // a match!
+//			                System.out.println("I found " + name);
+//			                break;
+//			            }
+//			        }
+			        
+//			    String word = sc.next();
+//			        while  {
+//			            String search = sc.next();
+//			            System.out.println("SEARCH CONTENT:"+search);
+//
+//			            if (search.equalsIgnoreCase(word)) {
+//			                System.out.println("Found: " +search);
+//			            } 
+//			            else  {
+//			                System.out.println("No data found.");
+//			            }
+//			        }
+			        
+			        
 			     
 				break;
 
