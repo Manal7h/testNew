@@ -3,11 +3,13 @@ package TsakApi;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 public class SearchJson {
 	public static void main(String[] args) throws IOException{
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
+	
 	String[] words=null;  //Intialize the word Array
     FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt");  //Creation of File Reader object
     BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
@@ -16,6 +18,13 @@ public class SearchJson {
     //while
     System.out.println("Enter Word");
     String input=sc.next(); // Input word to be searched
+    
+    
+    
+    List<String> WordsList = new ArrayList<>();
+    
+    
+    
     //
     
     
