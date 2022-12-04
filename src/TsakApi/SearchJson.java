@@ -9,15 +9,21 @@ public class SearchJson {
 	public static void main(String[] args) throws IOException{
 		Scanner sc = new Scanner(System.in);
 	String[] words=null;  //Intialize the word Array
-    FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API2.txt");  //Creation of File Reader object
+    FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt");  //Creation of File Reader object
     BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
-    String s;   
+    String s; 
+    
+    //while
     System.out.println("Enter Word");
-    String input=sc.next();  // Input word to be searched
+    String input=sc.next(); // Input word to be searched
+    //
+    
+    
     int count=0;  //Intialize the word to zero
     while((s=br.readLine())!=null)   //Reading Content from the file
     {
-       words=s.split(" ");  //Split the word using space
+    	s=s.replaceAll("\\W", " ") ;
+       words=s.split(" ");//Split the word using space
         for (String word : words) 
         {
                if (word.equals(input))   //Search for the given word
