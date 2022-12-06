@@ -3,6 +3,7 @@ package TsakApi;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,23 +12,24 @@ public class SearchJson {
 	Scanner sc = new Scanner(System.in);
 	
 	String[] words=null;  //Intialize the word Array
+
+	
+	
+	
     FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt");  //Creation of File Reader object
     BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
     String s; 
     
-    //while
-    System.out.println("Enter Word");
-    String input=sc.next(); // Input word to be searched
+
+    System.out.println("Enter number of words:");
+    Integer num=sc.nextInt();
+    String input; // Input num of word to be searched
     
     
-    
+
     List<String> WordsList = new ArrayList<>();
     
-    
-    
-    //
-    
-    
+
     int count=0;  //Intialize the word to zero
     while((s=br.readLine())!=null)   //Reading Content from the file
     {
