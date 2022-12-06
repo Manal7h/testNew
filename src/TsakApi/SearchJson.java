@@ -20,11 +20,12 @@ public class SearchJson {
     Integer num=sc.nextInt();
     String input; // Input num of word to be searched
     
-    List<String> WordsList = new ArrayList<>();
+    List<String> ListOfWords = new ArrayList<>();
     System.out.println("Enter number of words:" +num + "word :");
     
     for(int i=0 ; i<num; i++) {
     	String[] words=null;//Intialize the word Array		
+    	
     	FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt");  //Creation of File Reader object
     	BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
     	
@@ -38,28 +39,46 @@ public class SearchJson {
     	String input = null;
     	Set<String> set = new LinkedHashSet<>();
     	String[] words;
-    	List<String> WordsList = new ArrayList<>();
+    	
+    	List<String> ListOfWords = new ArrayList<>();
     	System.out.println("Enter name of .txt file to search from :");
     	String fileName= sc.next();
     	
     	System.out.println("Enter words:");
     	boolean w = true;
-    	while(w) //Reading Content from the file{
+    	while(w) 
     		input=sc.next();
     	if ("End".equals(input)) //Search for the given word	
     		{
-    		
+    		break;
     		
     	}
-    	
+    	ListOfWords.add(input);
     }
 
-    
+    System.out.println("Input list:" + ListOfWords);
+      for (String wr : ListOfWords) {
+    FileReader fr = new FileReader(fileName + ".txt" );
+  	BufferedReader br = new BufferedReader(fr);
+    	  int count=0;
+    	  String s;
+    	  
+    	  while((s=br.readLine())!=null){
+    		  s=s.replaceAll("\\W", " ") ;
+    		   words=s.split(" "); //Split the word using space 	
+     
+      for(String word : words) {
+    	  if(word.contains(wr)) {
+    		  
+    		  
+    	  }
+    	  
+      }
+    		  
+    	  }
    
     {
-    	s=s.replaceAll("\\W", " ") ;
-       words=s.split(" ");//Split the word using space
-        for (String word : words) 
+   
         {
               
                {
