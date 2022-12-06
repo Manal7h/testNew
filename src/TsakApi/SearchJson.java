@@ -25,10 +25,16 @@ public class SearchJson {
     Integer num=sc.nextInt();
     String input; // Input num of word to be searched
     
-    
-
     List<String> WordsList = new ArrayList<>();
+    System.out.println("Enter number of words:" +num + "word :");
     
+    for(int i=0 ; i<num; i++) {
+    	
+    	
+    	
+    	
+    	
+    }
 
     int count=0;  //Intialize the word to zero
     while((s=br.readLine())!=null)   //Reading Content from the file
