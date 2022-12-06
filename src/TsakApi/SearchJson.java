@@ -45,6 +45,9 @@ public class SearchJson {
     	System.out.println("Enter words:");
     	boolean w = true;
     	while(w) //Reading Content from the file{
+    		input=sc.next();
+    	if ("End".equals(input)) //Search for the given word	
+    		{
     		
     		
     	}
@@ -58,7 +61,7 @@ public class SearchJson {
        words=s.split(" ");//Split the word using space
         for (String word : words) 
         {
-               if (word.equals(input))   //Search for the given word
+              
                {
                  count++;    //If Present increase the count by one
                }
