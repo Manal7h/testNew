@@ -1,6 +1,7 @@
 package TsakApi;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,90 +12,66 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class SearchJson {
-	public static void main(String[] args) throws IOException{
-	Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+//
+//			FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt"); // Creation of		
+//		// object
 
-    
+		File file = new File("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt");
+		List<String> wordsOfList = new ArrayList<String>();
+		String[] words = null;
 
-    System.out.println("Enter number of words:");
-    Integer num=sc.nextInt();
-    String input; // Input num of word to be searched
-    
-    List<String> ListOfWords = new ArrayList<>();
-    System.out.println("Enter number of words:" +num + "word :");
-    
-    for(int i=0 ; i<num; i++) {
-    	String[] words=null;//Intialize the word Array		
-    	
-    	FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt");  //Creation of File Reader object
-    	BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
-    	
-    	
-    	
-    	int count=0;  //Intialize the word to zero
-    	String s; 
-    	input=sc.next();
-    	
-    	
-    	String input = null;
-    	Set<String> set = new LinkedHashSet<>();
-    	String[] words;
-    	
-    	List<String> ListOfWords = new ArrayList<>();
-    	System.out.println("Enter name of .txt file to search from :");
-    	String fileName= sc.next();
-    	
-    	System.out.println("Enter words:");
-    	boolean w = true;
-    	while(w) 
-    		input=sc.next();
-    	if ("End".equals(input)) //Search for the given word	
-    		{
-    		break;
-    		
-    	}
-    	ListOfWords.add(input);
-    }
+		String input = null; // Input From user
+		System.out.print("Please enter the words you want to Search | writ STOP to stop" + "\n");
 
-    System.out.println("Input list:" + ListOfWords);
-      for (String wr : ListOfWords) {
-    FileReader fr = new FileReader(fileName + ".txt" );
-  	BufferedReader br = new BufferedReader(fr);
-    	  int count=0;
-    	  String s;
-    	  
-    	  while((s=br.readLine())!=null){
-    		  s=s.replaceAll("\\W", " ") ;
-    		   words=s.split(" "); //Split the word using space 	
-     
-      for(String word : words) {
-    	  if(word.contains(wr)) {
-    		  
-    		  
-    	  }
-    	  
-      }
-    		  
-    	  }
-   
-    {
-   
-        {
-              
-               {
-                 count++;    //If Present increase the count by one
-               }
-        }
-    }
-    if(count!=0)  //Check for count not equal to zero
-    {
-       System.out.println("The given word is present for "+count+ " Times in the file");
-    }
-    else
-    {
-       System.out.println("The given word is not present in the file");
-    }
-    
-       fr.close();
-}
+		while (sc.hasNext()) {
+			input = sc.nextLine(); // Input From user
+			if (input.equalsIgnoreCase("STOP")) {
+				break;
+			}
+
+			wordsOfList.add(input);
+		}
+
+		for (String set : wordsOfList) {
+
+			FileReader fileReader = new FileReader(file);
+
+			BufferedReader br = new BufferedReader(fileReader);
+			String word;
+			int count = 0;
+
+			while ((word = br.readLine()) != null) {
+				words = word.split(" ");
+
+				for (String w : words) {
+					if (w.contains(set)) {
+
+						count++;
+
+					}
+
+				}
+			}
+
+			if (count > 1) {
+
+				System.out.println(set + " " + "This word is Present for " + count + " Times in the File");
+			} else if (count == 1) {
+
+				System.out.println(set + " " + "This Word is Unique ");
+
+			}
+
+			else {
+				System.out.println(set + " " + "This Word is not in the File");
+			}
+
+			fileReader.close();
+
+		}
+
+	}
+
 }
