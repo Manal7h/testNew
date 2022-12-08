@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-public class SearchJson {
-	public static void main(String[] args) throws IOException {
+public class SearchJsonT {
+	public static void searchJs() throws IOException {
 		Scanner sc = new Scanner(System.in);
 //
 //			FileReader fr = new FileReader("C:\\Users\\user018\\eclipse-workspace\\TASKAPI\\API.txt"); // Creation of		
