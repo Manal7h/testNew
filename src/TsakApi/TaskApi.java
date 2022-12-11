@@ -50,40 +50,22 @@ public class TaskApi {
 				break;
 				
 			case 2:
-				
 
-
-			    System.out.println(" enter the content you looking for");
-//			    String name = sc.next();
-		    	
-//			        while (sc.hasNext()) {
-//			            final String lineFromFile = sc.nextLine();
-//			            if (lineFromFile.contains(name))
-//			            		{
-//			                // a match!
-//			                System.out.println("I found " + name);
-//			                break;
-//			            }
-//			        }
-			        
-//			    String word = sc.next();
-//			        while  {
-//			            String search = sc.next();
-//			            System.out.println("SEARCH CONTENT:"+search);
-//
-//			            if (search.equalsIgnoreCase(word)) {
-//			                System.out.println("Found: " +search);
-//			            } 
-//			            else  {
-//			                System.out.println("No data found.");
-//			            }
-//			        }
+				SearchJsonT SearchJsonTObj = new SearchJsonT();
+				SearchJsonTObj.searchJs();
 			        
 			        
 			     
 				break;
-
+				
+				
 			case 3:
+				ReadPDF SearchPDF = new ReadPDF();
+				SearchPDF.readUsingPdfBox();
+				
+				break;
+
+			case 4:
 				System.out.println("Done");
 				System.exit(0);
 				break;
