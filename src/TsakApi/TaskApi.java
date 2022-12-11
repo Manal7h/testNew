@@ -14,7 +14,8 @@ public class TaskApi {
 		System.out.println("Please Choice one Option:");
 		System.out.println("1- Consume API and Write File:");
 		System.out.println("2- Search word from File:");
-		System.out.println("3- Exite:");
+		System.out.println("3- Search word from PDF:");
+		System.out.println("4- Exite:");
 	}
 
 	public static void main(String[] args) throws IOException {
